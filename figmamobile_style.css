@@ -246,7 +246,7 @@ hr{
 }
 
 .tgl-style + .tgl-btn {
-    background: #fbfbfb;
+    background: burlywood;
     border-radius: 2em;
     padding: 2px;
     transition: all .4s ease;
@@ -264,13 +264,13 @@ hr{
     will-change: padding;
 }
 .tgl-style + .tgl-btn:active {
-    box-shadow: inset 0 0 0 2em #e8eae9;
+    box-shadow: inset 0 0 0 2em rgb(124, 103, 76);
 }
 .tgl-style + .tgl-btn:active:after {
     padding-right: .8em;
 }
 .tgl-style:checked + .tgl-btn {
-    background: #86d993;
+    background: blueviolet;
 }
 .tgl-style:checked + .tgl-btn:active {
     box-shadow: none;
@@ -351,11 +351,22 @@ hr{
 
     }
     .lang{
-        width: 75px;
-        transform: rotate(-90deg);
+        /* width: 75px; */
+        /* transform: rotate(-90deg); */
         font: 18px main_bold;
         color: #828282;
     }
+
+    .lig, .dar {
+        /* position: absolute; */
+        display: flex;
+        align-items: center;
+    }
+
+    .lig {
+        
+    }
+
     .bold{
         font: 47px main_bold;
 
