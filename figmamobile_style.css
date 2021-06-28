@@ -213,6 +213,9 @@ hr{
 #toggler {
     display: none;
 }
+#toggler1 {
+    display: none;
+}
 
 .tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
     box-sizing: border-box;
@@ -280,6 +283,75 @@ hr{
 }
 
 @media screen and (min-width: 1000px) {
+
+    #toggler1 {
+        display: none;
+    }
+    
+    .tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
+        box-sizing: border-box;
+    }
+    
+    .tgl + .tgl-btn {
+        outline: 0;
+        display: block;
+        width: 4em;
+        height: 2em;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+    }
+    
+    .tgl + .tgl-btn:after {
+        position: relative;
+        display: block;
+        content: "";
+        text-align: center;
+        width: 50%;
+        height: 100%;
+    }
+    
+    .tgl + .tgl-btn:after {
+        left: 0;
+    }
+    
+    .tgl:checked + .tgl-btn:after {
+        left: 50%;
+    }
+    
+    .tgl-style + .tgl-btn {
+        background: burlywood;
+        border-radius: 2em;
+        padding: 2px;
+        transition: all .4s ease;
+        border: 1px solid #e8eae9;
+    }
+    
+    .tgl-style + .tgl-btn:after {
+        border-radius: 2em;
+        background: #fbfbfb;
+        transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+    }
+    
+    .tgl-style + .tgl-btn:hover:after {
+        will-change: padding;
+    }
+    .tgl-style + .tgl-btn:active {
+        box-shadow: inset 0 0 0 2em rgb(124, 103, 76);
+    }
+    .tgl-style + .tgl-btn:active:after {
+        padding-right: .8em;
+    }
+    .tgl-style:checked + .tgl-btn {
+        background: blueviolet;
+    }
+    .tgl-style:checked + .tgl-btn:active {
+        box-shadow: none;
+    }
+    .tgl-style:checked + .tgl-btn:active:after {
+        margin-left: -.8em;
+    }
     
     .icons{
         padding-top: 200px;
@@ -361,10 +433,6 @@ hr{
         /* position: absolute; */
         display: flex;
         align-items: center;
-    }
-
-    .lig {
-        
     }
 
     .bold{
